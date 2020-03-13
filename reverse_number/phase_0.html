@@ -71,7 +71,86 @@
 			<p>
 				For example 1, it does sound simple, right? But what about example 2 and 
 				3, if the answer 1 surprises you. Well, you're not alone. Keep reading to
-				see the reason.
+				see to find the reason.
+			</p>
+
+			<h3>What is the "old approach" to reverse a number ?</h3>
+
+			<p>
+				Before introducing the "old approach", let's first look at the number from
+				the mathematic lens.<br/>
+				12345 = 10000 + 2000 + 300 + 40 + 5<br/>
+				This can be intepreted more under the combination of 10 multiplers<br/>
+				12345 = 1*10^4 + 2*10^3 + 3*10^2 + 4*10^1 + 5*10^0<br/>
+				From the idea observed from the len of mathematician, we see that every
+				unsigned integer can always be represented under the combination of 10
+				multiplers.
+				Now, let's look at <b>what we have to do</b>. To reverse number, for 
+				example, 12345, it's must become 54321, which mean that<br/>
+				12345 = 1*10^4 + 2*10^3 + 3*10^2 + 4*10^1 + 5*10^0<br/>
+				Now, become<br/>
+				54321 = 5*10^4 + 4*10^3 + 3*10^2 + 2*10^1 + 1*10^0<br/>
+				At first, it's <span style = "background:grey">1*10^4</span>, later, it
+				become <span style = "background:grey">5*10^4</span>, and so on.
+			</p>
+
+			<table>
+				<tr>
+					<td>Column</th>
+					<td>4</td>
+					<td>3</td>
+					<td>2</td>
+					<td>1</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Number</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+				</tr>
+			</table>
+
+			<p>
+				As eye can discern, each individual digit is multiplied with 10 to the 
+				power of column number. With little help with divide(/) and modulus(%)
+				we can get the digit then multiply it with corresponding column.
+			</p>
+
+			<p>
+				We will use small number here so a demostration, let's say 123. Now, we
+				need to get the last number(it's number 3). Using modulus, we get<br/>
+				<span style = "background:grey">3 = 123 % 10</span><br/>
+				OK, that good, we now need to get number 2. Let's use modulus again, this
+				time % 100 will give us 2. Wait a minute, it's really 2. Let's try it, 
+				shall we?<br/>
+				<span style = "background:grey">123 % 100 = 23(that's not 2)</span><br/>
+				At this moment, our hypothesis seems to be wrong, isn't it?<br/>
+				<span style = "background:grey">123 = 100 + 23.</span><br/>
+				Therefore, % 100 will result in 23. But how about 120.
+				<span style = "background:grey">120 % 100 = 20.</span><br/>
+				Yup, it doesn't work, either. But wait, we got 20, 20 / 10 = 2. This is
+				the moment of truth.<br/>
+				<span style = "background:grey">
+					(123 - 3) = 120<br/>
+					120 % 100 = 20<br/>
+					20 / 10 = 2<br/>
+				</span>
+				It seems like a long step to deal with when it come to number 1.<br/>
+				<span style = "background:grey">((123 - 20 - 3) % 1000) / 10 = 1</span>
+				Yup, pretty long way, and we have to deal with 1000, what if the number 
+				is 1234567890987, how many power of 10 do we have to deal with. I think
+				now we should use the power of computer. Let's say I have a power 
+				function named `floor`. floor(12.5) = 12, floor(4.0) = 4. This function
+				return the integer part of any real number. Now, our method will be 
+				reduced to just a few lines with small number.
+				<span style = "background: grey">
+					floor(123 / 10) % 10 = floor(12.3) % 10 = 12 % 10 = 2
+				</span><br/>
+				That's cool, but what about, number 1. Well, let's said it now, we change
+				our mind, we don't need to reverse number 123, we just need 12 (=floor(123 / 10)). Getting 1 
 			</p>
 		</div>
 	</body>
