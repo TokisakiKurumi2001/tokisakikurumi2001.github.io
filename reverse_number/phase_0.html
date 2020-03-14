@@ -150,7 +150,34 @@
 					floor(123 / 10) % 10 = floor(12.3) % 10 = 12 % 10 = 2
 				</span><br/>
 				That's cool, but what about, number 1. Well, let's said it now, we change
-				our mind, we don't need to reverse number 123, we just need 12 (=floor(123 / 10)). Getting 1 
+				our mind, we don't need to reverse number 123, we just need 12
+				(=floor(123 / 10)). Getting 1 is just 1=floor(12 / 10) % 10. Simple, 
+				right?
+			</p>
+
+			<p>
+				Up until now, we already figure out how to get each digit individually.
+				Let's summarize it:
+				<span style = "background: grey">
+					3 = 123 % 10
+					2 = floor(123 / 10) % 10
+					1 = floor(floor(123 / 10) / 10) % 10
+				</span><br/>
+				Pretty simple, right? Now, in order to get 321, which mean 3*100 + 2*10+1
+				You may now recognize some similarities between the number of zeroes
+				behind 1 equal to number of missing `floor`. Well, it's little vague, 
+				allow me to elaborate it for you. Number 1 has 2 `floor` appears 
+				according to the formula above, and that two `floor` is the biggest
+				number of floor of the three numbers(1,2,3). Therefore, we mark 1 as
+				standard, number 3 has 0 `floor`, it's missing 2 floors, which means
+				it need 2 zeroes(100); on the other hand, 2 has 1 `floor`, missing 1
+				so it has 1 zero(10) and last but not least, 1 has 2 `floor`, missing 0
+				so it has 0 zero(1).
+			</p>
+
+			<p>
+				I hope I have explained enough about the workhorse of `reverse number`
+				in mathematics concept. Now it's time for some codes.
 			</p>
 		</div>
 	</body>
