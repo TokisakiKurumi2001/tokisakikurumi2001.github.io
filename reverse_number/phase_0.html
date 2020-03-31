@@ -3,6 +3,7 @@
 	<head>
 		<title>Reverse number with different approaches in many programming languages: Phase 0</title>
 		<meta charset = "UTF-8">
+		<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/tomorrow-night-blue.min.css">
 	</head>
 	<body>
 		<div>
@@ -179,6 +180,75 @@
 				I hope I have explained enough about the workhorse of `reverse number`
 				in mathematics concept. Now it's time for some codes.
 			</p>
+			<pre><code class = "javascript">
+var sum = 0;
+var digit = 0;
+var num = 321;
+while (num != 0) {
+	digit = num % 10;
+	sum = sum * 10 + digit;
+	num = Math.floor(num / 10);
+}				
+			</code></pre>
+			<p>
+				The code is self-explanatory itself. However, it's a little bit different
+				from the mathematics way. Let me crack the code into a much familiar way.
+				First, we have some declaration of variable. A digit and sum, and default value of num = 321. Then we go to the while loop. The condition
+				here to execute the while-loop body is the num must be different from 0. 
+				At start, we assume num is 321; therefore, obviously, `num != 0` must be
+				true. Then we get the number 1 by `num % 10`, after that, we take `sum * 
+				10 + digit`, which is `0*10+1` = 1 => sum now is 1. Last but not least, 
+				we divide num by 10, which results in 32.1 and flooring it to get 32 =>
+				num is now equals 32. After the whole while-loop body is executed, we go
+				back to check the condition `num != 0`, which turns out to be true, and
+				we repeat the whole process again with value of `num = 32`.
+			</p>
+			<p>
+				The table below record all the values of `num`, `sum` and `digit`
+				accordings to the number of while-loop executed.
+			</p>
+			<table>
+				<tr>
+					<th>Number of loop</th>
+					<th>num</th>
+					<th>sum</th>
+					<th>digit</th>
+				</tr>
+				<tr>
+					<td>0</td>
+					<td>321</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>32</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>3</td>
+					<td>12</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>0</td>
+					<td>123</td>
+					<td>3</td>
+				</tr>
+			</table>
+			<p>
+				And that is the old approach to reverse number. Pretty cool, right?
+			</p>
+			<h2>
+				What about the "new approach" to reverse number?
+			</h2>
 		</div>
+
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/javascript.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 	</body>
 </html>
