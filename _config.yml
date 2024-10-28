@@ -274,7 +274,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 
 scholar:
   last_name: [Le]
-  first_name: [Khoi, M.]
+  first_name: [Khoi]
 
   style: apa
   locale: en
