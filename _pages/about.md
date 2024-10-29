@@ -18,9 +18,9 @@ Hi there, I'm Khôi. I'm currenly a AI Resident at [VinAI Research Residency Pro
 
 My research aims to develop effective and efficient methods for advancing and democratizing artificial intelligence in the era of large language models (LLMs). Specific areas of focus include:
 
-- **Data sampling**: Pre-determine the needed data resources for training the LLMs to adapt to new skills.
-- **Low-resource adaptation**: Inject data-scarced knowledge into LLMs, including adapting LLMs for low-resource languages.
+- **Data sampling**: effectively pre-determining the needed data resources for adapting the LLMs to new skills.
+- **Low-resource adaptation**: injecting data-scarced knowledge into LLMs, including knowledge from low-resource languages.
 - **Parameter-efficient transfer learning**: efficiently transferring knowledge across tasks, languages, and modalities.
-- **Model distillation**: Scale down model without minimal trade-offs.
+- **Model distillation**: scaling down model without minimal trade-offs.
 
 **CONTACT**: minhkhoile2001nsg [at] gmail.com
