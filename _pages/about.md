@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: VinAI Research Resident
+subtitle: I'm currently looking for PhD.
 
 profile:
   align: right
@@ -14,8 +14,13 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi there, I'm Khôi. I'm currenly a AI Resident at [VinAI Research Residency Program](https://www.vinai.io/vinai-ai-residency/). My mentor is [Assistant Professor Luu Anh Tuan](https://scholar.google.com/citations?user=d6ixOGYAAAAJ).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research aims to develop effective and efficient methods for advancing and democratizing artificial intelligence in the era of large language models (LLMs). Specific areas of focus include:
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+- **Data sampling**: Pre-determine the needed data resources for training the LLMs to adapt to new skills.
+- **Low-resource adaptation**: Inject data-scarced knowledge into LLMs, including adapting LLMs for low-resource languages.
+- **Parameter-efficient transfer learning**: efficiently transferring knowledge across tasks, languages, and modalities.
+- **Model distillation**: Scale down model without minimal trade-offs.
+
+**CONTACT**: minhkhoile2001nsg [at] gmail.com
